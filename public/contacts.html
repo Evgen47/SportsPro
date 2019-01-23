@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SportsPro</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/snow-it.js"></script>
+</head>
+<body>
+<header class="headerlong">
+    <div class="container">
+        <img class="logo" src="img/logo.png" alt="logo" height="71" width="71">
+        <ul class="menu">
+            <li class="menu-item"><a class="main-navigation" href="index.html">Главная</a></li>
+            <li class="menu-item"><a class="main-navigation" href="catalog.html">Каталог</a></li>
+            <li class="menu-item"><a class="main-navigation" href="contacts.html">Контакты</a></li>
+            <li class="menu-item"><a class="main-navigation" href="basket.html">Корзина</a></li>
+        </ul>
+    </div>
+</header>
+<main class="container">
+    <ul class="breadcrumb">
+        <li><a href="index.html">Главная</a></li>
+        <li class="active"><a href="contacts.html">Контакты</a></li>
+    </ul>
+<fieldset>
+    <legend class="letter">Напишите нам</legend>
+    <form action="form.php" method="post">
+        <input type="text" name="username" class="form" placeholder="Ваше имя">
+        <br>
+        <input type="email" name="email" class="form" placeholder="Ваш электронный адрес">
+        <br>
+        <input type="text" name="subject" class="form" placeholder="Тема сообщения">
+        <br>
+        <label for="message">Напишите сообщение:</label>
+        <br>
+        <textarea class="form" name="letter" id="message" cols="35" rows="5"></textarea>
+        <br>
+        <input class="button" type="submit" value="Отправить">
+    </form>
+</fieldset>
+    <h2>Адрес</h2>
+    <p>
+        <strong>Телефон: </strong> +7 923 458 78 96<br>
+        <strong>Адрес: </strong> г. Москва, ТРК "Метрополис", Ленинградское ш., д.16А<br>
+        <strong>Email: </strong> help@sportspro.ru<br>
+    </p>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aab5b7ea2e9932a396858f28d44f15d7f68b71f25f8b44191555b28391beb55be&amp;width=970&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
+</main>
+<footer>
+    <div class="footer-social container">
+        <div class="social">
+            <ul>
+                <li>
+                    <a class="social-button" href="https://vk.com"><img src="img/vk-icon.svg" width="25" height="25" alt="Вконтакте"></a>
+                </li>
+                <li>
+                    <a class="social-button" href="https://facebook.com"><img src="img/fb-icon.svg" width="25" height="25" alt="Facebook"></a>
+                </li>
+                <li>
+                    <a class="social-button" href="https://instagram.com"><img src="img/insta-icon.svg" width="25" height="25" alt="Instagram"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy;«Все права защищены»</p>
+</footer>
+</body>
+<script type="text/javascript">
+    $.fn.snowit({
+        flakeColor: '#fff',
+        total: 100,
+        minSize : 30,
+        maxSize : 50,
+    });
+</script>
+</html>

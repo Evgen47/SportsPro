@@ -1,6 +1,7 @@
 <?php
 define('TITLE', 'SportsPro' );
 $year = 2019;
+include '//public/'
 ?>
 
 <!DOCTYPE html>
