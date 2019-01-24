@@ -5,11 +5,11 @@
  			'Ростовская область' => ['Ростов','Азов','Шахты']
  ];
 
-foreach ($regions as $key => $value) {
- echo $key . ':<br>';
-foreach ($value as $key => $value) {
- echo $value . '<br>';
- }
- echo "<br>";
+foreach ($regions as $region => $cities) {
+    echo $region . ':<br>';
+    foreach ($cities as $city) {
+        echo $city . '<br>';
+    }
+    echo "<br>";
 }
 ?>
