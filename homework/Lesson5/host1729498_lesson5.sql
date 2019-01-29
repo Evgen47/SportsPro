@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Янв 28 2019 г., 11:47
+-- Время создания: Янв 29 2019 г., 22:40
 -- Версия сервера: 5.7.23-23-log
 -- Версия PHP: 7.1.1
 
@@ -29,21 +29,23 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `gallery` (
-  `id` int(255) NOT NULL,
+  `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `size` double NOT NULL,
-  `link` varchar(255) NOT NULL
+  `type` varchar(255) NOT NULL,
+  `path` varchar(255) NOT NULL,
+  `opened` int(255) NOT NULL,
+  `seen` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `gallery`
 --
 
-INSERT INTO `gallery` (`id`, `name`, `size`, `link`) VALUES
-(1, 'Бавария', 25, 'img/01.jpg'),
-(2, 'Оренбург', 25, 'img/02.jpg'),
-(3, 'Милан', 25, 'img/03.jpg'),
-(4, 'Арсенал', 25, 'img/04.jpg');
+INSERT INTO `gallery` (`id`, `name`, `type`, `path`, `opened`, `seen`) VALUES
+(1, 'Бавария.jpg', 'jpg', 'img\\', 6, 54),
+(2, 'Оренбург.jpg', 'jpg', 'img\\', 6, 54),
+(3, 'Милан.jpg', 'jpg', 'img\\', 34, 54),
+(4, 'Арсенал.jpg', 'jpg', 'img\\', 12, 54);
 
 --
 -- Индексы сохранённых таблиц
@@ -63,7 +65,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT для таблицы `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
